@@ -33,31 +33,30 @@ Vercelに出す公開用ファイルを作る場合:
 npm run build
 ```
 
-公開用ファイルは `dist/` に出力されます。
+公開用ファイルは `public/` に出力されます。
 
 ```bash
 npm run preview
 ```
 
-`dist/` の内容をローカルで確認できます。
+`public/` の内容をローカルで確認できます。
 
 ## Vercel設定
 
 Vercelでは以下の設定でデプロイできます。
 
 - Framework Preset: `Other`
-- Build Command: 空欄、または `npm run check`
-- Output Directory: 空欄
-- Install Command: 空欄、または `npm install`
+- Build Command: `npm run build`
+- Output Directory: `public`
+- Install Command: `npm install`
 
-このサイトはルート直下の `index.html` をそのまま公開する静的サイトです。
-`dist/` はローカル確認用のビルド成果物で、Vercel公開には必須ではありません。
+このサイトはビルド時に `index.html`、`styles.css`、`script.js`、`assets/` を `public/` へコピーし、Vercelは `public/` を公開します。
 
 Vercelで404になる場合は、Project SettingsのBuild & Development Settingsで以下を確認してください。
 
 - Root Directory: このプロジェクトフォルダ
-- Output Directory: 空欄
-- Build Command: 空欄、または `npm run check`
+- Output Directory: `public`
+- Build Command: `npm run build`
 
 ## 環境変数
 
