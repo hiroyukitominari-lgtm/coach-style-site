@@ -51,6 +51,7 @@ Vercelでは以下の設定でデプロイできます。
 - Install Command: `npm install`
 
 このサイトはビルド時に `index.html`、`styles.css`、`script.js`、`assets/` を `public/` へコピーし、Vercelは `public/` を公開します。
+`public/` もリポジトリに含める構成にしているため、Vercel側でビルド設定が反映されない場合でも公開ファイルが存在します。
 
 Vercelで404になる場合は、Project SettingsのBuild & Development Settingsで以下を確認してください。
 
