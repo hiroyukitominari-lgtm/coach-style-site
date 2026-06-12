@@ -46,11 +46,18 @@ npm run preview
 Vercelでは以下の設定でデプロイできます。
 
 - Framework Preset: `Other`
-- Build Command: `npm run build`
-- Output Directory: `dist`
-- Install Command: `npm install`
+- Build Command: 空欄、または `npm run check`
+- Output Directory: 空欄
+- Install Command: 空欄、または `npm install`
 
-`vercel.json` に同じ設定を入れているため、通常は自動検出で問題ありません。
+このサイトはルート直下の `index.html` をそのまま公開する静的サイトです。
+`dist/` はローカル確認用のビルド成果物で、Vercel公開には必須ではありません。
+
+Vercelで404になる場合は、Project SettingsのBuild & Development Settingsで以下を確認してください。
+
+- Root Directory: このプロジェクトフォルダ
+- Output Directory: 空欄
+- Build Command: 空欄、または `npm run check`
 
 ## 環境変数
 
