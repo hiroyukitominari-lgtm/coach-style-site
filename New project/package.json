@@ -1,0 +1,16 @@
+{
+  "name": "coach-style-official-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "COACH STYLE official static website.",
+  "scripts": {
+    "build": "node scripts/validate.mjs && node scripts/build.mjs",
+    "check": "node scripts/validate.mjs",
+    "dev": "node scripts/dev-server.mjs",
+    "preview": "node scripts/dev-server.mjs public 4173"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
